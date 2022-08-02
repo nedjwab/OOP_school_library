@@ -6,9 +6,16 @@ is a ruby program that allows the user to to record what books are in the librar
 - Add new books.
 - Save records of who borrowed a given book and when
 
+## Acknowledgments
+
 ## Getting Started
-To setup the project use :
-git clone https://github.com/nedjwab/OOP_school_library.git
+- To setup the project First clone this repo using the git command line  :
+> git clone https://github.com/nedjwab/OOP_school_library.git
+- Then you you access to the project's folder 
+> cd OOP_library_scool 
+- Finally execute :
+> Ruby student.rb 
+
 
 ## Authors
 
