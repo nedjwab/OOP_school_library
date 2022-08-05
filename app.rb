@@ -91,7 +91,7 @@ class App
     puts 'Please select a book by entering its ID'
     @books.each_with_index { |book, index| puts "Id: #{index}, Title: #{book.title}, Author: #{book.author}" }
     selected_book = gets.chomp.to_i
-    puts 'Slesct a person from the following list by entering his/her number'
+    puts 'Select a person from the following list by entering his/her number'
     @people.each_with_index { |person, index| puts "Number: #{index}, Name: #{person.name}, Age: #{person.age}" }
     selected_person = gets.chomp.to_i
     puts 'Enter rental starting date using this format (yyyy/mm/dd)'
