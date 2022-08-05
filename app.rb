@@ -100,5 +100,20 @@ class App
       p 'Choose between 1 and 2'
     end
   end
+
+  def create_teacher
+    age = -1
+    print 'Age: '
+    while age <= 0
+      age = gets.chomp.to_i
+      print 'Add correct age of teacher: ' if age <= 0
+    end
+    print 'Name: '
+    name = gets.chomp.strip.capitalize
+    print 'Specialization: '
+    specialization = gets.chomp.strip.capitalize
+    @people.push(Teacher.new(age, specialization, name))
+    puts 'Teacher created successfuly!'
+  end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
