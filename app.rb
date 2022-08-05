@@ -69,5 +69,19 @@ class App
       key += 1
     end
   end
+
+  def list_people
+    key = 0
+    puts
+    puts 'People'
+    puts 'No people available! Choose (3) to create a person ' if @people.empty?
+    @people.each do |person|
+      print "#{key}- [#{person.class.name}] ID: #{person.id} Name: #{person.name} Age: #{person.age} "
+      print "Parent Permission: #{person.parent_permission}" if person.is_a?(Student)
+      print "Specialisation: #{person.specialization}" if person.is_a?(Teacher)
+      puts
+      key += 1
+    end
+  end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
