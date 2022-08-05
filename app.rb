@@ -1,4 +1,4 @@
-# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/CyclomaticComplexity, Metrics/ClassLength
 require './book'
 require './teacher'
 require './student'
@@ -178,4 +178,4 @@ class App
     puts 'Book created successfully'
   end
 end
-# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/CyclomaticComplexity, Metrics/ClassLength
