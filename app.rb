@@ -24,9 +24,9 @@ class App
   def check(option)
     case option
     when 1
-      fetch_books
+      list_books
     when 2
-      fetch_people
+      list_people
     when 3
       create_person
     when 4
@@ -34,7 +34,7 @@ class App
     when 5
       create_rental
     when 6
-      fetch_rentals
+      list_rentals
     when 7
       nil
     else
@@ -86,7 +86,7 @@ class App
 
   def list_rentals
     puts
-    fetch_people
+    list_people
     puts 'Choose Person ID?: '
     entry = gets.chomp.to_i
     puts 'Rentals'
@@ -154,10 +154,10 @@ class App
   end
 
   def create_rental
-    fetch_books
+    list_books
     print 'Select the key of the book: '
     book_select = gets.chomp.chomp.to_i
-    fetch_people
+    list_people
     print 'Select the key of the person: '
     person_select = gets.chomp.chomp.to_i
     print 'Select the date: (Year/Month/Day): '
