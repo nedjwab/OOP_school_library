@@ -11,7 +11,7 @@ class Person < Nameable
     @rentals = []
   end
 
-  attr_accessor :name, :age, :rentals, :parent_permission, :specialization
+  attr_accessor :name, :age, :rentals
   attr_reader :id
 
   def of_age?
