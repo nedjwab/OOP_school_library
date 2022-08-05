@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/CyclomaticComplexity
 require './book'
 require './teacher'
 require './student'
@@ -42,3 +43,4 @@ class App
     end
   end
 end
+# rubocop:enable Metrics/CyclomaticComplexity
