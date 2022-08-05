@@ -168,5 +168,14 @@ class App
     puts 'Rental created successfuly!'
     puts
   end
+
+  def create_book
+    print 'Title: '
+    title = gets.chomp.strip.capitalize
+    print 'Author: '
+    author = gets.chomp.strip.capitalize
+    @books.push(Book.new(title, author))
+    puts 'Book created successfully'
+  end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
