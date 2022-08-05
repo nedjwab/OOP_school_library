@@ -84,6 +84,22 @@ class App
     end
   end
 
+  def list_rentals
+    puts
+    fetch_people
+    puts 'Choose Person ID?: '
+    entry = gets.chomp.to_i
+    puts 'Rentals'
+    @people.each do |person|
+      next unless person.id == entry
+
+      person.rentals.each do |rental|
+        puts "Date: #{rental.date} Book title: #{rental.book.title} by #{rental.book.author}"
+        puts
+      end
+    end
+  end
+
   def create_person
     entry = nil
     print 'Choose (1) to Create a Student or (2) for a Teacher: '
