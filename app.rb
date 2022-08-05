@@ -58,5 +58,16 @@ class App
     end
     puts 'GOOD BYE'
   end
+
+  def list_books
+    key = 0
+    puts
+    puts 'Books'
+    puts 'No book available! Choose (4) to  create one' if @books.empty?
+    @books.each do |book|
+      puts "#{key}- Title: #{book.title} Author: #{book.author}"
+      key += 1
+    end
+  end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
