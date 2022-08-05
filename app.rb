@@ -115,5 +115,26 @@ class App
     @people.push(Teacher.new(age, specialization, name))
     puts 'Teacher created successfuly!'
   end
+
+  def create_student
+    print 'Age: '
+    age = -1
+    while age <= 0
+      age = gets.chomp.to_i
+      print 'Add correcte age of student: ' if age <= 0
+    end
+    print 'Name: '
+    name = gets.chomp.strip.capitalize
+    print 'Has parent permission ? (N/Y): '
+    permission = gets.chomp.strip.upcase
+    case permission
+    when 'Y', 'YES'
+      permission = true
+    when 'N', 'NO'
+      permission = false
+    end
+    @people.push(Student.new(nil, age, name, parent_permission: permission))
+    puts 'Student created successfuly!'
+  end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
