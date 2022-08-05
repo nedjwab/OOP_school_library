@@ -152,5 +152,21 @@ class App
     @people.push(Student.new(nil, age, name, parent_permission: permission))
     puts 'Student created successfuly!'
   end
+
+  def create_rental
+    fetch_books
+    print 'Select the key of the book: '
+    book_select = gets.chomp.chomp.to_i
+    fetch_people
+    print 'Select the key of the person: '
+    person_select = gets.chomp.chomp.to_i
+    print 'Select the date: (Year/Month/Day): '
+    date = gets.chomp.strip
+    book = @books[book_select]
+    person = @people[person_select]
+    person.add_rental(date, book)
+    puts 'Rental created successfuly!'
+    puts
+  end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
