@@ -42,5 +42,21 @@ class App
       options
     end
   end
+
+  def menu
+    puts
+    p 'School Library App!'
+    puts
+    option = nil
+    while option != 7
+      puts 'Please choose an option by entrering a number: '
+      options
+      print '[Input number]: '
+      option = gets.chomp.strip.to_i
+      check(option)
+      puts
+    end
+    puts 'GOOD BYE'
+  end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
