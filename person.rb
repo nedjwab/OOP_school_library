@@ -30,4 +30,5 @@ class Person < Nameable
   def add_rental(rental)
     @rental.push(rental)
     rental.person = self
+  end
 end
